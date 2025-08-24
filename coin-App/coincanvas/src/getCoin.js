@@ -15,7 +15,7 @@ const getCoin = (query) => {
  
   fetch(url, options) // change the link with our url
     .then((response) => response.json())
-    .then((result) => console.log(result));
+    .then((result) => console.log(result.data.coins[2]));
 }; 
 
 export default getCoin; // since we opened this function outside need to export it !
