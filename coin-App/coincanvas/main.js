@@ -9,7 +9,7 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   // console.log("form triggered"); //after we used preventDefault we prevent form from submitting
 
-  getInputVal(); // we call a function to able to run input and enter our values into it.
+  getInputVal(); // when we trigger form by submittin this function has to be run, below we open that function
   form.reset(); // to clean the data inside the form
 });
 
