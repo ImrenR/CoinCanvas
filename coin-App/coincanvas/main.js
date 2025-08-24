@@ -20,7 +20,8 @@ const getInputVal = () => {
    if (!input.trim()) { // if you leave spacevand run this button still be working to prevent this we add trim()
     alert("You cant leave this empty")
    } else {
-    console.log(input)
+    // console.log(input)
+    getCoin () // this function will go through the database and bring the datas we need
    }
 
 
