@@ -40,3 +40,16 @@ export const getCoin = async(query) => {
 }; 
 
 
+//? The difference between Axios and Fetch:
+//*Axios
+// A popular third-party HTTP client library for making requests.
+// Works in both browsers and Node.js.
+// Automatically transforms JSON data (no need to call .json()).
+// Provides simpler syntax and built-in features like request/response interceptors, timeout handling, and error handling.
+// Requires installation: npm install axios.
+//* Fetch
+// A built-in JavaScript API for making HTTP requests.
+// Works in modern browsers (and Node.js with node-fetch).
+// Returns a Promise that resolves to a Response object—you need to call .json() to parse data.
+// Has fewer features out of the box (no interceptors, no automatic timeout).
+
