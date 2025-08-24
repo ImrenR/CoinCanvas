@@ -19,7 +19,7 @@
 //     .then((result) => console.log(result))
 // }; 
 
-export const getCoin = async(query) => {
+const getCoin = async(query) => {
   console.log("works !", query); // this will work when we import this module file otherwise does not work !
 
   const url =`https://api.coinranking.com/v2/coins?search=${query}`; // I defined the API in this URL as a variable ${query}
@@ -40,13 +40,15 @@ export const getCoin = async(query) => {
 }; 
 
 
+export default getCoin;
+
 //? The difference between Axios and Fetch:
 //*Axios
 // A popular third-party HTTP client library for making requests.
 // Works in both browsers and Node.js.
 // Automatically transforms JSON data (no need to call .json()).
 // Provides simpler syntax and built-in features like request/response interceptors, timeout handling, and error handling.
-// Requires installation: npm install axios.
+// Requires installation: //! npm install axios.
 //* Fetch
 // A built-in JavaScript API for making HTTP requests.
 // Works in modern browsers (and Node.js with node-fetch).

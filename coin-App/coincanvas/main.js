@@ -1,5 +1,5 @@
 import "./scss/style.scss"; // we add sass package to make connet sass codes automaticly, this one of benefits of vite and node.js
-import getCoin from "./src/getCoin"; // we need to import this module to able to use it here
+import getCoin from "./src/getCoin.js"; // we need to import this module to able to use it here
 
 const form = document.querySelector("header form"); //we can use form instead input since form submits as well.
 // console.log(form)
