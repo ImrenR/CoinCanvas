@@ -24,7 +24,8 @@ const displayCoin = (coin) => {
     </li>`;
   // ul.appendChild(li) // attach in the end
   ul.prepend(li); // opposites above
-
+  
+//! Delete the one you entered
   li.querySelector(".remove-icon").addEventListener("click", () => {
     li.remove();
   });
