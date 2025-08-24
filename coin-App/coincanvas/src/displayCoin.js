@@ -5,7 +5,7 @@ const displayCoin = (coin)=> {
   const {price,change,name,symbol, iconUrl, rank} = coin // destructed
   const ul = document.querySelector(".coins")
   const li = document.createElement("li")
-  li.innerHTML="";
+
   li.className="coin" 
   li.innerHTML =
   `<li class="coin"
