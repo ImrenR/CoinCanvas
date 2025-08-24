@@ -1,6 +1,5 @@
 import "./scss/style.scss"; // we add sass package to make connet sass codes automaticly, this one of benefits of vite and node.js
-
-// console.log("olaaaaa")
+import getCoin from "./src/getCoin"; // we need to import this module to able to use it here
 
 const form = document.querySelector("header form"); //we can use form instead input since form submits as well.
 // console.log(form)
@@ -15,17 +14,13 @@ form.addEventListener("submit", (e) => {
 
 const getInputVal = () => {
   // console.log(input.value) // when we click on "search" the button triggered and showed the value we entered on console (dont forget we added .value)
-  const input = document.querySelector("header form input").value ;
+  const input = document.querySelector("header form input").value;
   //  console.log(input)
-   if (!input.trim()) { // if you leave spacevand run this button still be working to prevent this we add trim()
-    alert("You cant leave this empty")
-   } else {
+  if (!input.trim()) {
+    // if you leave spacevand run this button still be working to prevent this we add trim()
+    alert("You cant leave this empty");
+  } else {
     // console.log(input)
-    getCoin () // this function will go through the database and bring the datas we need
-   }
-
-
-
-
-
+    getCoin(input); // this function will go through the database and bring the datas we need
+  }
 };
