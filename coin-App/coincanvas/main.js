@@ -16,5 +16,15 @@ form.addEventListener("submit", (e) => {
 const getInputVal = () => {
   // console.log(input.value) // when we click on "search" the button triggered and showed the value we entered on console (dont forget we added .value)
   const input = document.querySelector("header form input").value ;
-   console.log(input)
+  //  console.log(input)
+   if (!input.trim()) { // if you leave spacevand run this button still be working to prevent this we add trim()
+    alert("You cant leave this empty")
+   } else {
+    console.log(input)
+   }
+
+
+
+
+
 };
