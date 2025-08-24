@@ -1,15 +1,12 @@
+const displayCoin = (coin) => {
+  const { price, change, name, symbol, iconUrl, rank } = coin; // destructed
+  const ul = document.querySelector(".coins");
+  const li = document.createElement("li");
 
-
-
-const displayCoin = (coin)=> {
-  const {price,change,name,symbol, iconUrl, rank} = coin // destructed
-  const ul = document.querySelector(".coins")
-  const li = document.createElement("li")
-
-  li.className="coin" 
-  li.innerHTML =
-  `<li class="coin"
-        <div class="remove-icon">
+  li.className = "coin";
+  li.innerHTML = `
+     <li class="coin">
+     <div class="remove-icon">
             <i class="fas fa-window-close"></i>
         </div>
         <h2 class="coin-name" data-name="Ripples">
@@ -19,20 +16,18 @@ const displayCoin = (coin)=> {
         <div class="coin-temp">$$${Number(price).toFixed(2)}</div>
             <figure>
                 <img class="coin-icon" src="${iconUrl}">                
-                <figcaption style='color:${change < 0 ? "red" : "green" }'>
+                <figcaption style='color:${change < 0 ? "red" : "green"}'>
                     <i class="fa-solid fa-chart-line"></i>
                     <span>${change}%</span>
                 </figcaption>
         </figure>
-    </li>`
-    // ul.appendChild(li) // attach in the end
-    ul.prepend(li) // opposites above
+    </li>`;
+  // ul.appendChild(li) // attach in the end
+  ul.prepend(li); // opposites above
 
- }
+  li.querySelector(".remove-icon").addEventListener("click", () => {
+    li.remove();
+  });
+};
 
- export default displayCoin
-
-
-
-
- 
+export default displayCoin;
