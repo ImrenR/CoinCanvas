@@ -2,6 +2,8 @@
 //! Important note : whenever we click to submit our value the result will come "works!" therefore we need to call input as parameter inside getCoin() ==> main.js!
 
 import axios from "axios";
+import displayCoin from "./displayCoin";
+
 //? with fetch
 // export const getCoin = (query) => {
 //   console.log("works !", query); // this will work when we import this module file otherwise does not work !
@@ -44,7 +46,7 @@ import axios from "axios";
 //? with axios
 
 const getCoin = async(query) => {
-  console.log("works !", query); 
+  // console.log("works !", query); 
 
   const url =`https://api.coinranking.com/v2/coins?search=${query}`; 
 
@@ -55,7 +57,16 @@ const getCoin = async(query) => {
     },
   }; 
  const res = await axios(url,options) //data cekme islemleri async dur. burada json islemine gerek yoktur. otomatik olarak axios yapar
- console.log(res)
+const coins = res.data.data.coins
+ 
+ if (!coins.length) { //eger length 0 ise 
+  alert("couldnt found coins")
+  
+ } else {
+  // console.log(coins)
+  
+  displayCoin(coins)
+ }
 }; 
 
 export default getCoin;

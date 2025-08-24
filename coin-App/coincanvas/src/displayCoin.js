@@ -1,0 +1,38 @@
+
+
+
+const displayCoin = (coin)=> {
+  const {price,change,name,symbol, iconUrl, rank} = coin // destructed
+  const ul = document.querySelector(".coins")
+  const li = document.createElement("li")
+  li.innerHTML="";
+  li.className="coin" 
+  li.innerHTML =
+  `<li class="coin"
+        <div class="remove-icon">
+            <i class="fas fa-window-close"></i>
+        </div>
+        <h2 class="coin-name" data-name="Ripples">
+            <span>${name}</span>
+            <sup>${symbol}</sup>
+        </h2>
+        <div class="coin-temp">$$${Number(price).toFixed(2)}</div>
+            <figure>
+                <img class="coin-icon" src="${iconUrl}">                
+                <figcaption style='color:${change < 0 ? "red" : "green" }'>
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>${change}%</span>
+                </figcaption>
+        </figure>
+    </li>`
+    // ul.appendChild(li) // attach in the end
+    ul.prepend(li) // opposites above
+
+ }
+
+ export default displayCoin
+
+
+
+
+ 
